@@ -1,0 +1,27 @@
+
+        } elseif ($distribusi && $year) {
+            $data['countMB'] = $this->pintuModel->getCountYearlyDept($year, $distribusi);
+            $data['countMF'] = $this->hydrantModel->getCountYearlyDept($year, $distribusi);
+            $data['countMU'] = $this->smokeModel->getCountYearlyDept($year, $distribusi);
+            $data['countML'] = $this->fireModel->getCountYearlyDept($year, $distribusi);
+            $data['countTMB'] = $this->pintuModel->getTotalYearlyDept($year, $distribusi);
+            $data['countTMF'] = $this->hydrantModel->getTotalYearlyDept($year, $distribusi);
+            $data['countTMU'] = $this->smokeModel->getTotalYearlyDept($year, $distribusi);
+            $data['countTML'] = $this->fireModel->getTotalYearlyDept($year, $distribusi);
+            $data['countTB'] = $this->pintuModel->getTotalDeptYear($year, $distribusi);
+            $data['countTF'] = $this->hydrantModel->getTotalDeptYear($year, $distribusi);
+            $data['countTU'] = $this->smokeModel->getTotalDeptYear($year, $distribusi);
+            $data['countTL'] = $this->fireModel->getTotalDeptYear($year, $distribusi);
+        } elseif ($users && $year) {
+            $data['countMB'] = $this->pintuModel->getCountYearlyUser($year, $users);
+            $data['countMF'] = $this->hydrantModel->getCountYearlyUser($year, $users);
+            $data['countMU'] = $this->smokeModel->getCountYearlyUser($year, $users);
+            $data['countML'] = $this->fireModel->getCountYearlyUser($year, $users);
+            $data['countTMB'] = $this->pintuModel->getTotalYearlyUser($year, $users);
+            $data['countTMF'] = $this->hydrantModel->getTotalYearlyUser($year, $users);
+            $data['countTMU'] = $this->smokeModel->getTotalYearlyUser($year, $users);
+            $data['countTML'] = $this->fireModel->getTotalYearlyUser($year, $users);
+            $data['countTB'] = $this->pintuModel->getTotalUserYear($year, $users);
+            $data['countTF'] = $this->hydrantModel->getTotalUserYear($year, $users);
+            $data['countTU'] = $this->smokeModel->getTotalUserYear($year, $users);
+            $data['countTL'] = $this->fireModel->getTotalUserYear($year, $users);
